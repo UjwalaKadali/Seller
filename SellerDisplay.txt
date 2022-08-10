@@ -1,0 +1,11 @@
+package com.hexaware.java8examples.optionalclassexample;
+
+public class SellerDisplay {
+  public static void main(String args[])
+  {
+	  Seller a = new Seller();
+	  
+	  a.addDetails();
+	  a.display();
+  }
+}

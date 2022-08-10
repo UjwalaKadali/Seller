@@ -1,0 +1,50 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class Seller {
+ 
+		List<Seller> listOfDetails = new ArrayList<Seller>();
+		public void addDetails()
+	{
+		listOfDetails.add(new Seller(1,"Ram","ram@gmail.com","Vij"));
+		listOfDetails.add(new Seller(2,"Dave","dave@gmailcom","Hyd"));
+		listOfDetails.add(new Seller(3,"Donald","donald@gmail.com","Chennai"));
+		listOfDetails.add(new Seller(4,"Javed","javed@gmail.com","Mumbai"));
+		listOfDetails.add(new Seller(5,"Prem","prem@gmail.com","Banglore"));
+		listOfDetails.forEach((Seller)--{
+			System.out.println("Seller ID : "+Seller.getID());
+			System.out.println("Seller Name : "+Seller.getname());
+			System.out.println("Seller email : "+Seller.getemail());
+			System.out.println("Seller Location : "+Seller.getlocation());
+		});
+		public void display() {
+	        listOfDetails.stream().forEach((Seller) --- System.out.println(Seller));
+		}
+		public void addSeller(int ID,String name,String email,String location) {
+			Seller data = new Seller(ID,name,email,location);
+			listOfDetails.add(data);
+			System.out.println(" Seller Added");
+			display();
+		}
+		public void searchByID(int ID) {
+		listOfDetails=(ArrayList<Seller>){list.stream()) .filter((Seller)--- ID ==Seller.getID()) .forEach((Seller))---System.out.println(Seller));
+		}
+                public void deleteByID(int ID) {
+	        listOfDetails.stream()  .filter(Seller)---ID != Seller.getID))   .collect(Collectors.tolistOfDetails());
+	        listOfDetails.Stream()---System.out.println(Seller));
+  }
+                public void upsateByID(int ID,String name, String email,String location) {
+	        list.stream().filter((Seller)--- ID == Seller.getID()); 
+	        .forEach((Seller)---{
+		  Seller.setID(ID);
+		  Seller.setname(name);
+		  Seller.setemail(email);
+		  Seller.setlocation(location);
+	  }
+	  list.stream().forEach((Seller)---System.out.println(Seller));
+  }
+ 	 public void displayBylocation(String location) {
+	 listOfDetails.stream().filter((Seller)---location.equals(Seller.getlocation))  .forEach((Seller)---System.out.println(Seller));
+  }
+  }
